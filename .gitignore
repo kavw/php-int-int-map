@@ -12,3 +12,5 @@
 # Environment files
 .env
 .*.env
+
+vendor

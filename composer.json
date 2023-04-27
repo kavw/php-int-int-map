@@ -1,0 +1,49 @@
+{
+  "name": "kavw/php-int-int-map",
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.1 || ^8.2",
+    "ext-shmop": "*"
+  },
+  "suggest": {
+    "ext-sysvsem": "*"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.9",
+    "phpunit/phpunit": "^10.1",
+    "squizlabs/php_codesniffer": "^3.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kavw\\IntIntMap\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Kavw\\IntIntMap\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "cs": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/phpcs --standard=PSR12 ./src"
+    ],
+    "cs-fix": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/phpcbf ./src"
+    ],
+    "phpstan": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/phpstan analyse -l9 ./src"
+    ],
+    "phpunit": [
+      "Composer\\Config::disableProcessTimeout",
+      "vendor/bin/phpunit ./tests"
+    ],
+    "tests": [
+      "@cs",
+      "@phpstan",
+      "@phpunit"
+    ]
+  }
+}

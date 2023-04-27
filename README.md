@@ -1,1 +1,1 @@
-# Template for a common repository
+Example of int to int map implementation using `ext-shmop`

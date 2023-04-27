@@ -3,9 +3,12 @@
 *.cmd text eol=crlf
 *.ahk text eol=crlf
 
+*.php text
+
 *.gitattributes text
 .gitignore      text
 .editconfig     text
+Makefile        text
 *.md            text diff=markdown
 
 #
@@ -15,6 +18,9 @@
 .gitattributes  export-ignore
 .gitignore      export-ignore
 .editconfig     export-ignore
+./tests         export-ignore
+./docker        export-ignore
+./Makefile      export-ignore
 
 #
 # Enable syntax highlighting for files with `.gitattributes` extensions.
