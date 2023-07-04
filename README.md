@@ -1,1 +1,1 @@
-Example of int to int map implementation using `ext-shmop`
+Example of an int to int map implementation that uses the `ext-shmop`
